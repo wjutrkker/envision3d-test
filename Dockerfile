@@ -19,7 +19,7 @@ RUN python3.10 -m pip install pytorch-lightning xformers
 RUN apt-get install cmake -y
 
 RUN cd /tmp && git clone --recursive https://github.com/nvlabs/tiny-cuda-nn && cd tiny-cuda-nn && cmake . -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo && cmake --build build --config RelWithDebInfo -j --verbose
-RUN cd /tmp/tiny-cuda-nn && cd bindings/torch python3.10 setup.py install
+RUN cd /tmp/tiny-cuda-nn && cd bindings/torch && python3.10 setup.py install
 RUN cd /code/Envision3D/instant-nsr-pl && python3.10 -m pip install -r requirements.txt
 RUN python3.10 -m pip install trimesh
 
