@@ -19,8 +19,9 @@ Edit/create the /etc/docker/daemon.json with content:
 }
 ```
 ```
-docker run --gpus=2 --network host -it -v $PWD:/code  envision3d:latest 
-to Be run in the container
+docker run --gpus=2 --network host -it -v $PWD:/code  envision3d:latest
+```
+To be run in the container
 ```
 git clone https://github.com/PKU-YuanGroup/Envision3D.git
 cd /code/Envision3D/pretrained_models/ && git clone https://huggingface.co/pytttttt/Envision3D && cp -r ./Envision3D/* . && rm -rf ./Envision3D
